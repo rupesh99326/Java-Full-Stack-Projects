@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="itemOne" class="com.cognizant.moviecruiser.model.movie">
+              <property name="id" value="1"></property>
+              <property name="title" value="Avatar"></property>
+              <property name="box_office" value="2787965087"></property>
+              <property name="active" value="true"></property>
+              <property name="date_of_Launch" value="03/15/2017"></property>
+              <property name="genre" value="Science Fiction"></property>
+              <property name="has_teaser" value="true"></property>
+            <property name="image" value="https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Avatar-Teaser-Poster.jpg/220px-Avatar-Teaser-Poster.jpg"></property>
+        </bean>
+
+       <bean id="itemTwo" class="com.cognizant.moviecruiser.model.movie">
+              <property name="id" value="2"></property>
+              <property name="title" value="The Avengers"></property>
+              <property name="box_office" value="1518812988"></property>
+              <property name="active" value="true"></property>
+              <property name="date_of_Launch" value="12/23/2017"></property>
+              <property name="genre" value="Superhero"></property>
+              <property name="has_teaser" value="false"></property>
+                    <property name="image" value="https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg"></property>
+      </bean>
+
+       <bean id="itemThree" class="com.cognizant.moviecruiser.model.movie">
+              <property name="id" value="3"></property>
+              <property name="title" value="Titanic"></property>
+              <property name="box_office" value="2187463944"></property>
+              <property name="active" value="true"></property>
+              <property name="date_of_Launch" value="08/21/2017"></property>
+              <property name="genre" value="Romance"></property>
+              <property name="has_teaser" value="false"></property>
+            <property name="image" value="https://upload.wikimedia.org/wikipedia/en/1/19/Titanic_%28Official_Film_Poster%29.png"></property>
+ </bean>
+
+       <bean id="itemFour" class="com.cognizant.moviecruiser.model.movie">
+              <property name="id" value="4"></property>
+              <property name="title" value="Jurassic World"></property>
+              <property name="box_office" value="1671713208"></property>
+              <property name="active" value="false"></property>
+              <property name="date_of_Launch" value="07/02/2017"></property>
+              <property name="genre" value="Science Fiction"></property>
+              <property name="has_teaser" value="true"></property>
+               <property name="image" value="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Jurassic_World_poster.jpg/220px-Jurassic_World_poster.jpg"></property>
+        </bean>
+
+       <bean id="itemFive" class="com.cognizant.moviecruiser.model.movie">
+              <property name="id" value="5"></property>
+              <property name="title" value="Avengers:End Game"></property>
+              <property name="box_office" value="2750760348"></property>
+              <property name="active" value="true"></property>
+              <property name="date_of_Launch" value="11/02/2022"></property>
+              <property name="genre" value="Superhero"></property>
+              <property name="has_teaser" value="true"></property>
+             <property name="image" value="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"></property>
+     </bean>
+
+       <bean id="movies" class="java.util.ArrayList">
+              <constructor-arg>
+                     <list>
+                           <ref bean="itemOne" />
+                           <ref bean="itemTwo" />
+                           <ref bean="itemThree" />
+                           <ref bean="itemFour" />
+                           <ref bean="itemFive" />
+                     </list>
+              </constructor-arg>
+       </bean>
+       
+</beans>

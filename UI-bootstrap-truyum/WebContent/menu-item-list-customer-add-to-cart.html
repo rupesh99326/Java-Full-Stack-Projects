@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"
+	type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+<div class="row">
+		<nav class="col-12 navbar navbar-expand-md  navbar-dark mynav">
+		<a class="navbar-brand" href="#"><i class="material-icons">restaurant_menu</i>truYum</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<div class="ml-auto">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link"
+						href="menu-item-list-customer.html">Menu Items</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="#"><i
+							class="material-icons">person</i>John</a></li>
+					<li class="nav-item"><a class="nav-link" href="menu-item-list.html">Logout</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</div>
+
+
+<div class="jumbotron">
+		<div class="container-fluid">
+			<span class="color"><h1>Find Food</h1></span>
+			<div class="input-group">
+
+				<div class="input-group-prepend">
+
+					<span class="input-group-text lighten-3"> <i
+						class="material-icons">free_breakfast</i></span>
+				</div>
+
+				<input class="form-control" type="text" placeholder="Search Food"
+					name="Search">
+			</div>
+
+		</div>
+
+	</div>
+
+
+<div class="container-fluid">
+		<div class="card-deck margin">
+			<div class="row">
+
+				<div class="col-lg-3 col-md-6">
+					<div class="card mt-4 ml-2 mr-2">
+						<img class="card-img-top"
+							src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80"
+							alt="sandwich image">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-8">
+									<h4 class="card-title">Sandwich</h4>
+								</div>
+								<div class="ml-auto">
+									<h4 class="text-color">₹99</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-8">
+									<p class="card-text">
+										<span class="badge badge-pill badge-success">Active</span>&nbsp;Main
+										Course
+									</p>
+								</div>
+								<div class="ml-auto">
+									<i class="material-icons md-30 truck">local_shipping</i> <span
+										class="badge badge-info">FREE</span>
+
+								</div>
+
+							</div>
+							<div class="row mt-4">
+								<div class="col-12">
+									<div class="alert alert-success">
+										<strong> Item added successfully</strong>
+									</div>
+								</div>
+
+							</div>
+							<div class="row mt-4 launch-size">
+								<div class="col-5">
+									<i class="material-icons md-10 launch">access_time</i>Launch
+									<div>15/03/2017</div>
+								</div>
+								<div class="row ml-0 mb-3 mr-2 launch-size">
+								<div class="ml-auto">
+									<a href="menu-item-list-customer-add-to-cart.html">
+										<button type="button" class="btn orange">
+											<i class="material-icons md-10">add_shopping_cart</i> Add to
+											Cart
+										</button>
+									</a>
+
+								</div>
+							</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		
+</body>
+<script>
+	$('#dateOfLaunch').datepicker({
+		uiLibrary : 'bootstrap4',
+		format : 'dd/mm/yyyy'
+	});
+</script>
+<nav class="navbar navbar-expand-sm  navbar-dark mynav fixed-bottom">
+	<a class="navbar-brand" href="#">Copyright2019</a>
+
+
+</nav>
+</html>

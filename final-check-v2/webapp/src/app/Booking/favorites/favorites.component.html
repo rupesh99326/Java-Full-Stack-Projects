@@ -1,0 +1,38 @@
+
+
+
+	<div class="container">
+		<h1>Favorites</h1>
+<div class="alert alert-success" *ngIf="this.favoritesservice.favoritesstatus">Favorite Item deleted Succesfully</div>
+<div class="alert alert-danger" *ngIf="this.favoritesservice.favoritesempty">No Items in the Favorites.Use 'Add to Favorites Option' in the <a class="list" routerLink="/search-bar">Movie item list</a></div>
+
+<div class="alert alert-success" *ngIf="!this.favoritesservice.favoritesempty">
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let iterate of this.favoritesservice.favorites1.movieList">
+				<div class="cgray">
+					{{iterate.title}}<span class="par"></span>
+
+
+
+				</div>
+
+				<p>
+					<a (click)="removeFromFavorites(iterate.id)"><i class="material-icons float-right cgray">delete_forever</i></a>
+				</p>
+
+			</li>
+
+		
+			<li class="list-group-item">
+				<div>
+					<strong>No of Favorites</strong><span class="pr">{{this.favoritesservice.favorites1.movieList.length }}</span>
+
+				</div>
+			</li>
+		</ul></div>
+	</div>
+
+
+
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="itemOne" class="com.cognizant.truyum.model.MenuItem">
+              <property name="id" value="1"></property>
+              <property name="name" value="Sandwich"></property>
+              <property name="price" value="99"></property>
+              <property name="active" value="true"></property>
+              <property name="Date_of_Launch" value="03/15/2017"></property>
+              <property name="category" value="Main Course"></property>
+              <property name="free_delivery" value="true"></property>
+            <property name="image" value="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1"></property>
+        </bean>
+
+       <bean id="itemTwo" class="com.cognizant.truyum.model.MenuItem">
+              <property name="id" value="2"></property>
+              <property name="name" value="Burger"></property>
+              <property name="price" value="129"></property>
+              <property name="active" value="true"></property>
+              <property name="Date_of_Launch" value="12/23/2017"></property>
+              <property name="category" value="Main Course"></property>
+              <property name="free_delivery" value="false"></property>
+                    <property name="image" value="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-1.2.1"></property>
+      </bean>
+
+       <bean id="itemThree" class="com.cognizant.truyum.model.MenuItem">
+              <property name="id" value="3"></property>
+              <property name="name" value="Pizza"></property>
+              <property name="price" value="149"></property>
+              <property name="active" value="true"></property>
+              <property name="Date_of_Launch" value="08/21/2017"></property>
+              <property name="category" value="Main Course"></property>
+              <property name="free_delivery" value="false"></property>
+            <property name="image" value="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1"></property>
+ </bean>
+
+       <bean id="itemFour" class="com.cognizant.truyum.model.MenuItem">
+              <property name="id" value="4"></property>
+              <property name="name" value="French Fries"></property>
+              <property name="price" value="57"></property>
+              <property name="active" value="false"></property>
+              <property name="Date_of_Launch" value="07/02/2017"></property>
+              <property name="category" value="Starters"></property>
+              <property name="free_delivery" value="true"></property>
+               <property name="image" value="https://images.unsplash.com/photo-1526230427044-d092040d48dc?ixlib=rb-1.2.1"></property>
+        </bean>
+
+       <bean id="itemFive" class="com.cognizant.truyum.model.MenuItem">
+              <property name="id" value="5"></property>
+              <property name="name" value="Chocolate Brownie"></property>
+              <property name="price" value="32"></property>
+              <property name="active" value="true"></property>
+              <property name="Date_of_Launch" value="11/02/2022"></property>
+              <property name="category" value="Dessert"></property>
+              <property name="free_delivery" value="true"></property>
+             <property name="image" value="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?ixlib=rb-1.2.1"></property>
+     </bean>
+
+       <bean id="menuItem" class="java.util.ArrayList">
+              <constructor-arg>
+                     <list>
+                           <ref bean="itemOne" />
+                           <ref bean="itemTwo" />
+                           <ref bean="itemThree" />
+                           <ref bean="itemFour" />
+                           <ref bean="itemFive" />
+                     </list>
+              </constructor-arg>
+       </bean>
+       
+</beans>

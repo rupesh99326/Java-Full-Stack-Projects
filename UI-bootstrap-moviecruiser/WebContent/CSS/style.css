@@ -1,0 +1,136 @@
+/* include stylesheet for truYum */
+.nav-link {
+	color: white !important;
+}
+
+.mynav {
+	background-color: red;
+}
+
+#hand {
+	padding-left: 75px;
+}
+
+.material-icons {
+	vertical-align: middle;
+}
+
+#hand:hover {
+	color: red;
+}
+
+#h {
+	color: red;
+}
+
+del {
+	font-size: 13px;
+}
+
+#tit {
+	font-size: 14px
+}
+ /* .card {
+	width: 21rem;
+}  
+ */
+
+
+.par {
+	color: #943126;
+	float: right;
+}
+
+#truck {
+	color: navy;
+}
+
+#free {
+	margin: right;
+	float: right;
+}
+
+.trk {
+	float: right;
+}
+
+.orange {
+	background-color: tomato !important;
+	color: white !important;
+}
+
+#a3 {
+	float: right;
+}
+
+.right {
+	float: right;
+}
+
+.mar {
+	vertical-align: top;
+}
+
+.color {
+	color: white;
+}
+
+.jumbotron {
+	background-image:
+		url("https://images.unsplash.com/photo-1532568547949-a09f1afe4d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	height: auto;
+	background-size: cover;
+	width: 100%;
+}
+
+
+
+
+.c1{width:21rem;}
+
+
+.cgray{color:gray;}
+
+/* .card-deck{ 
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: .5rem;
+    margin-bottom:auto;
+} */
+
+
+.inv{display:block!important;}
+
+.text-color{color:brown;}
+.fnt{font-size:20px;}
+
+.fnt1{font-size:17px;}
+
+.card-deck .card{
+	width:18rem;
+}
+
+.card-img-top{
+	object-fit: fill;
+	width:18rem;
+	height:21rem;
+}
+
+
+.launch {
+	font-size: 15px;
+}
+.truck {
+	color: navy;
+}
+.fonts{
+    font-size: 18px;
+}
+.save:hover {
+	color: white;
+}
+
+.save {
+	background-color: tomato;
+	color: white;
+}

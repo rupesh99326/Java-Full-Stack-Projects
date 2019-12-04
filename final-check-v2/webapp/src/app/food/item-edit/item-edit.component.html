@@ -1,0 +1,101 @@
+
+<div *ngIf="movie.title!=''">
+<div class="container-fluid">
+	<h1>Edit Movie </h1>
+		<form [formGroup]="form" (submit)="OnSubmit()">
+			
+				<div class="row">
+					<div class="col-lg">
+            <label for="title">Movie Name</label> 
+            <input type="text"
+              class="form-control" id="title" [formControl]="title" formControlName="title">
+              
+
+
+              <div *ngIf="title.invalid && title.errors.required" class="invalid">
+                Name is Required
+              </div>
+              <div *ngIf="title.errors?.maxlength" class="invalid">
+                Max length 200
+              </div>
+					</div>
+
+        </div>
+        <div class="row">
+					<div class="col-lg">
+            <label for="photoURL">Photo URL</label> 
+            <input type="text"
+              class="form-control" id="photoURL" [formControl]="photoURL" formControlName="photoURL">
+              
+
+
+              <div *ngIf="photoURL.invalid && photoURL.errors.required" class="invalid">
+                Photo URL is Required
+              </div>
+              
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3">
+						<label for="box_office">Box Office</label> <input type="text"
+							class="form-control" id="box_office" [formControl]="box_office" formControlName="box_office">
+              <div *ngIf="box_office.invalid && box_office.errors.required" class="invalid">
+                Box OFfice is Required
+              </div>
+					</div>
+
+					<div class="col-lg-3">
+						<label for="Date_of_Launch">Date of Launch</label> <input type="text"
+							class="form-control" id="Date_of_Launch"[formControl]="Date_of_Launch" formControlName="Date_of_Launch">
+              <div *ngIf="Date_of_Launch.invalid && Date_of_Launch.errors.required" class="invalid">
+               Date Of Launch is Required
+              </div>
+					</div>
+					<div class="col-lg-3">
+            <label for="genre">Genre</label> 
+            <select name="genre"
+							class="form-control" id="genre" [formControl]="genre" formControlName="genre">
+              
+<option></option>
+							<option *ngFor="let item of categories" selected="movie.genre == item" [value]="item">{{item}}</option>
+						
+            </select>
+            <div *ngIf="genre.invalid && genre.errors.required" class="invalid">Genre is required </div>
+					</div>
+
+					<div class="col-lg-3">
+            <label for="active">Active</label><br>
+            
+          <label for="yes">Yes</label>
+            <input type="radio" id="yes" [value]=true [formControl]="active" formControlName="active"> 
+            
+            
+            
+            <label for="no">No</label> <input
+							type="radio" id="no"  [value]=false value="no" [formControl]="active" formControlName="active">
+          </div>
+          <div *ngIf="active.invalid && active.errors.required" class="invalid">
+            active is Required
+           </div>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+            <input type="checkbox" id="has_teaser" [formControl]="has_teaser" formControlName="has_teaser">
+             <label	for="has_teaser" >Has Teaser</label>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3">
+						<button type="submit" class="btn orange" [disabled]="!form.valid">Submit</button>
+					</div>
+				</div>
+			
+	
+
+	</form>
+	</div></div>

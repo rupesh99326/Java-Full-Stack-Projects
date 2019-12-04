@@ -1,0 +1,37 @@
+
+
+
+	<div class="container">
+		<h1>Cart</h1>
+<div class="alert alert-success" *ngIf="this.cartservice.cartstatus">Cart Item deleted Succesfully</div>
+<div class="alert alert-danger" *ngIf="this.cartservice.cartempty">No Items in the Cart.Use 'Add to Cart Option' in <a class="list" routerLink="/search-bar">menu item list</a></div>
+
+<div class="alert alert-success" *ngIf="!this.cartservice.cartempty">
+
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let iterate of this.cartservice.cart1.menuItemList">
+				<div class="cgray">
+					{{iterate.name}}<span class="par">{{iterate.price | currency:'INR'}}</span>
+				</div>
+  
+				<p>
+					<a (click)="removeFromCart(iterate.id)"><i class="material-icons float-right cgray">delete_forever</i></a>
+				</p>
+
+			</li>
+
+		
+			<li class="list-group-item">
+				<div>
+					<strong>Total</strong><span class="par">{{this.cartservice.cart1.total | currency:'INR'}}</span>
+
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+

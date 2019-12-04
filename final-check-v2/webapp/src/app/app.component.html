@@ -1,0 +1,49 @@
+
+
+ <div class="row">
+    <nav class="col-12 navbar navbar-expand-md  navbar-dark mynav">
+        <a class="navbar-brand" href="#"><i class="material-icons">local_movies</i>Movie Cruiser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-3 mr-2"
+            id="collapsibleNavbar">
+               <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link"	(click)="clickOnAddFavorites()" routerLink="search-bar/">Movies</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn() && !this.authService.isAdmin">
+                    <a class="nav-link" routerLink="favorites/">Favorites</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()">
+                    <a class=
+                    "nav-link"><i class="material-icons other_icon ">person </i> {{this.authService.loggedInUser}}</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()" (click)="this.authService.logout()">
+                    <a class="nav-link" routerLink="search-bar/">Logout</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddFavorites()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="login/">Login</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddFavorites()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="signup/">Signup</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div> 
+
+
+<nav class="navbar navbar-expand-sm  navbar-dark mynav fixed-bottom">
+	<a class="navbar-brand nav-link" href="#">Copyright2019</a>
+
+</nav>
+
+
+<router-outlet></router-outlet>
+
+
+
+

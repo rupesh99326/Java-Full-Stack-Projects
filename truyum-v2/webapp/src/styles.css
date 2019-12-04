@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+/* include stylesheet for truYum */
+.nav-link {
+	color: white !important;
+}
+
+.mynav {
+	background-color:navy;
+}
+
+#hand {
+	padding-left: 75px;
+}
+
+.material-icons {
+	vertical-align: middle;
+}
+
+#hand:hover {
+	color: red;
+}
+
+#h {
+	color: red;
+}
+
+del {
+	font-size: 13px;
+}
+
+#tit {
+	font-size: 14px
+}
+ /* .card {
+	width: 21rem;
+}  
+ */
+
+
+.par {
+	color: #943126;
+	float: right;
+}
+
+#truck {
+	color: navy;
+}
+
+#free {
+	margin: right;
+	float: right;
+}
+
+.trk {
+	float: right;
+}
+
+.orange {
+	background-color: tomato !important;
+	color: white !important;
+}
+
+#a3 {
+	float: right;
+}
+
+.right {
+	float: right;
+}
+
+.mar {
+	vertical-align: top;
+}
+
+.color {
+	color: white;
+}
+
+.jumbotron {
+	background-image:
+		url("https://images.unsplash.com/photo-1452967712862-0cca1839ff27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	height: auto;
+	background-size: cover;
+	width: 100%;
+}
+
+
+.card-img-top{width:100%;}
+
+.c1{width:21rem;}
+
+
+.cgray{color:gray;}
+
+/* .card-deck{ 
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: .5rem;
+    margin-bottom:auto;
+} */
+
+
+.inv{display:block!important;}
+/* 
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: .5rem;
+} */
+
+
+.sign:hover
+{
+	cursor:pointer;
+}

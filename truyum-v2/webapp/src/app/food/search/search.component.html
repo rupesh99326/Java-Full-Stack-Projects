@@ -1,0 +1,24 @@
+
+<div class="jumbotron">
+  <div class="container-fluid">
+    <span class="color"><h1>Find Food</h1></span>
+    <div class="input-group">
+
+      <div class="input-group-prepend">
+
+        <span class="input-group-text lighten-3"> <i
+          class="material-icons">free_breakfast</i></span>
+      </div>
+      
+      <input class="form-control" type="text" placeholder="Search Food"
+        name="Search" (keyup)="search($event)" >
+        <!-- <div *ngFor="let search of fooditem "></div>
+       {{fooditem1.name}}
+        </div> -->
+    </div>
+
+  </div>
+
+</div>
+<app-menu></app-menu>
+<!-- <app-menu [fooditem]="filterlist"></app-menu>  -->

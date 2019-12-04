@@ -1,0 +1,5 @@
+
+
+<div class="card-deck mb-7 pb-5 mt-3">
+ <div class="col-lg-3 col-md-6" *ngFor="let it of movie ">
+<app-item-info [movieitem1]="it" (addToFavoritesClicked)="addToFavorites($event)" ></app-item-info></div></div>

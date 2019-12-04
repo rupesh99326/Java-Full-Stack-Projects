@@ -1,0 +1,71 @@
+ 
+<div class="card mt-4 ml-2 mr-2">
+  <img class="card-img-top"
+    src={{fooditem1.image}}
+    alt="sandwich image">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-8">
+        <h4 class="card-title">{{fooditem1.name}}</h4>
+      </div>
+      <div class="ml-auto">
+        <h4 class="text-color par ">{{fooditem1.price | currency:'INR'}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8"> <div *ngIf="isAdmin">
+        <p class="card-text">
+         
+            <span class="badge badge-pill badge-success" *ngIf="fooditem1.active">Active</span>
+          <span class="badge badge-pill badge-danger" *ngIf="!fooditem1.active">Inactive</span>
+        </p></div>&nbsp;{{fooditem1.category}}
+      </div>
+      <div class="ml-auto">
+        <i class="material-icons md-30 truck" *ngIf="fooditem1.free_delivery">local_shipping</i> <span
+          class="badge badge-info" *ngIf="fooditem1.free_delivery">FREE</span>
+   
+
+      </div>
+
+
+    </div>
+    <div *ngIf="this.authservice.addedToCart && this._foodService.cartAddedId==fooditem1.id">
+      <div  class="alert alert-success alert-dismissible fade show alert-msg" role="alert">
+        Item added to cart successfully.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+  </div>
+
+ <div class="row mt-4 launch-size" >
+								<div class="ml-auto" *ngIf="!isAdmin">
+									<a >
+										<button type="button" class="btn orange" (click)="this._foodService.addToCart(fooditem1.id)">
+											<i class="material-icons md-10">add_shopping_cart</i> Add to
+											Cart
+										</button>
+									</a>
+
+								</div>
+    </div>
+
+
+    <div class="row" *ngIf="isAdmin">
+      <div class="col-5">
+        <i class="material-icons other_icon">access_time</i> Launch Date
+        <div>{{fooditem1.date_of_Launch | date}}</div>
+      </div>
+    <div class="ml-auto">
+      <button [routerLink]="['/edit-food-item',fooditem1.id]" type="button" class="btn btn-warning">
+        <i class="material-icons other_icon"> edit </i> Edit
+      </button>
+    </div>
+  </div>
+ 
+   
+  </div>
+
+
+</div>
+

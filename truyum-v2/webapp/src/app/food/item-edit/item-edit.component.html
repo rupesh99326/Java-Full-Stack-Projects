@@ -1,0 +1,102 @@
+
+ <div *ngIf="foodItem.name!=''">
+<div class="container-fluid">
+ 
+	<h1>Edit Menu Item</h1>
+		<form [formGroup]="form" (submit)="OnSubmit()">
+			
+				<div class="row">
+					<div class="col-lg">
+            <label for="title">Item Name</label> 
+            <input type="text"
+              class="form-control" id="title" [formControl]="title" formControlName="title">
+              
+
+
+              <div *ngIf="title.invalid && title.errors.required" class="invalid">
+                Name is Required
+              </div>
+              <div *ngIf="title.errors?.maxlength" class="invalid">
+                Max length 200
+              </div>
+					</div>
+
+        </div>
+        <div class="row">
+					<div class="col-lg">
+            <label for="photoURL">Photo URL</label> 
+            <input type="text"
+              class="form-control" id="photoURL" [formControl]="photoURL" formControlName="photoURL">
+              
+
+
+              <div *ngIf="photoURL.invalid && photoURL.errors.required" class="invalid">
+                Photo URL is Required
+              </div>
+              
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-3">
+						<label for="price">Price</label> <input type="text"
+							class="form-control" id="price" [formControl]="price" formControlName="price">
+              <div *ngIf="price.invalid && price.errors.required" class="invalid">
+                Price is Required
+              </div>
+					</div>
+
+					<div class="col-lg-3">
+						<label for="Date_of_Launch">Date of Launch</label> <input type="text"
+							class="form-control" id="Date_of_Launch"[formControl]="Date_of_Launch" formControlName="Date_of_Launch">
+              <div *ngIf="Date_of_Launch.invalid && Date_of_Launch.errors.required" class="invalid">
+               Date Of Launch is Required
+              </div>
+					</div>
+					<div class="col-lg-3">
+            <label for="category">Category</label> 
+            <select name="category"
+							class="form-control" id="category" [formControl]="category" formControlName="category">
+              
+<option></option>
+							<option *ngFor="let item of categories" selected="foodItem.category == item" [value]="item">{{item}}</option>
+						
+            </select>
+            <div *ngIf="category.invalid && category.errors.required" class="invalid">Category is required </div>
+					</div>
+
+					<div class="col-lg-3">
+            <label for="active">Active</label><br>
+            
+          <label for="yes">Yes</label>
+            <input type="radio" id="yes" [value]=true [formControl]="active" formControlName="active"> 
+            
+            
+            
+            <label for="no">No</label> <input
+							type="radio" id="no"  [value]=false value="no" [formControl]="active" formControlName="active">
+          </div>
+          <div *ngIf="active.invalid && active.errors.required" class="invalid">
+            active is Required
+           </div>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+            <input type="checkbox" id="free_delivery" [formControl]="free_delivery" formControlName="free_delivery">
+             <label	for="free_delivery" >Free Delivery</label>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3">
+						<button type="submit" class="btn orange" [disabled]="!form.valid">Submit</button>
+					</div>
+				</div>
+			
+	
+
+	</form>
+	</div></div>

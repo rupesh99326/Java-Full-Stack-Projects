@@ -1,0 +1,168 @@
+header{
+	background-color:navy;
+	width:100%;
+	height:40px;
+	color:lightgray;
+	font-family:verdana;
+	font-size:20px;
+	padding:5px;
+	
+}
+#u{
+	font-family:"arial";
+	margin-left:280px;
+	color:black;
+	
+
+}
+img{
+	height:30px;
+	width:30px;
+	padding-left:20px;
+}
+#mov{
+	padding-left:1300px;
+	color:white;
+}
+#fav{
+	color:white;
+	padding-left:30px;
+}
+#b{
+	padding:5px;
+	font-family:arial;
+}
+footer{
+	background-color:lightgray;
+	width:100%;
+	position:fixed;
+	bottom:0;
+	right:0;
+}
+.Boxoffice{
+	
+	text-align:right;
+	}
+	
+	
+	
+	#alertmsg{
+	
+	font-family:arial;
+	font-size:64;
+	margin-left:190px;
+	color:#008000;
+	
+}
+	
+	#mv{padding-left:1050px;	color:white;}
+	
+	#h21{
+	font-family:"arial";	margin-left:200px;
+	color:black;}
+	
+	#t1{width:88%;}
+	#b2{
+	background-color:navy;	border:none;
+	color:white;	padding:15px 32px;
+	text-align:center;	text-decoration:none;
+	display:inline-block;	font-size:16px;}
+	
+	
+h2{
+	font-family:"arial";
+	margin-left:190px;
+	color:black;
+}
+
+#alert2{
+	
+	text-align:center;
+	margin-left:auto;
+	font-size:64;
+	font-family:arial;;
+	color:green;
+}
+table{
+	font-family:"arial";
+	width:80%;
+	border-spacing:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#table1{
+	width:70%;
+	font-family:"arial";
+	border-spacing:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.df{
+	text-align:left;
+}
+
+#ir{margin-left:150px;}
+th,td{
+	text-align:center;
+}
+
+.pew{
+	text-align:right;
+}
+.new{
+	text-align:left;
+	width:50%;
+}
+
+
+
+
+#ig{
+	
+	text-align:left;
+	
+	}
+#alertmsg{
+	
+	font-family:arial;
+	font-size:64;
+	margin-left:190px;
+	color:#008000;
+	
+}
+#b2{
+	background-color:navy;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+}
+.df{
+	text-align:left;
+}
+
+#bn{
+	
+	font-family:arial;
+	margin-left:190px;
+}
+
+
+
+#alertmsg4{
+	
+	font-family:arial;	font-size:64;
+		margin-left:190px;	color:gray; }
+#balu{
+	text-align:right;
+}
+#ir{margin-left:150px;}
+	
+#mv{padding-left:1050px;	color:white;}
+
+	
+
+

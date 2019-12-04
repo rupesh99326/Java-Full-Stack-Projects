@@ -1,0 +1,93 @@
+
+
+ <div class="row">
+    <nav class="col-12 navbar navbar-expand-md  navbar-dark mynav">
+        <a class="navbar-brand" href="#"><i class="material-icons">restaurant_menu</i>truYum</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-3 mr-2"
+            id="collapsibleNavbar">
+               <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link"	(click)="clickOnAddCart()" routerLink="search-bar/">Menu Items</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn() && !this.foodService.isAdmin">
+                    <a class="nav-link" routerLink="cart/">Cart</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()">
+                    <a class=
+                    "nav-link"><i class="material-icons other_icon ">person </i> {{this.authService.loggedInUser}}</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()" (click)="this.authService.logout()">
+                    <a class="nav-link" routerLink="search-bar/">Logout</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddCart()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="login/">Login</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddCart()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="signup/">Signup</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div> 
+
+
+<nav class="navbar navbar-expand-sm  navbar-dark mynav fixed-bottom">
+	<a class="navbar-brand nav-link" href="#">Copyright2019</a>
+
+</nav>
+
+
+<router-outlet></router-outlet>
+
+
+<!-- 
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-sm navbar-dark text-light navbar_top">
+        <h2>
+            <i class="material-icons md-36"> restaurant_menu </i> truYum
+        </h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"	data-target="#navbarSupportedContent1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link"	(click)="clickOnAddCart()" routerLink="search-bar/">Menu Items</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn() && !this.foodService.isAdmin">
+                    <a class="nav-link" routerLink="cart/">Cart</a>
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()">
+                    <i class="material-icons other_icon">person </i> {{this.authService.loggedInUser.username}}
+                </li>
+                <li class="nav-item active" *ngIf="loggedIn()" (click)="this.authService.logout()">
+                    <a class="nav-link" routerLink="search-bar/">Logout</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddCart()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="login/">Login</a>
+                </li>
+                <li class="nav-item active" (click)="clickOnAddCart()" *ngIf="!loggedIn()">
+                    <a class="nav-link" routerLink="signup/">Signup</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+     -->
+  <!-- <app-search></app-search>
+<app-menu [fooditem]="filterlist"></app-menu>   -->
+
+<!-- <app-item-edit></app-item-edit>
+
+
+
+
+<app-shopping-cart></app-shopping-cart>  -->
+<!-- 
+<app-login></app-login> 
+     -->
+

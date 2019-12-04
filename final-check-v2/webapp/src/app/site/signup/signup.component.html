@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-11 mt-5 ml-5 mr-5 mb-5 mx-auto">
+    <div class="card mt-5 c2">
+      <h1 class="mt-5 ml-5">Signup</h1>
+      <form [formGroup]="signUpForm" (submit)="this.userService.addUser(signUpForm.value)">
+        <div class="row mt-5 ml-5 mr-5">
+            <div class="alert-danger col-12 px-auto" *ngIf="!this.userService.userExists">
+              Username already exists
+            </div>
+          <div class="col-md-6 col-xs-12">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" placeholder="Enter Username" formControlName="username" id="username">
+            <div class="text-danger" *ngIf="username.invalid && username.errors.required && username.touched">Username is required</div>
+          </div>
+        </div>
+        <div class="row ml-5 mr-5">
+          <div class="col-md-6 col-xs-12 mt-5">
+            <label for="firstname">First Name</label> 
+            <input type="text" class="form-control" placeholder="Enter First Name" formControlName="firstname" id="firstname">
+            <div class="text-danger" *ngIf="firstname.invalid && firstname.errors.required && firstname.touched">First Name is required</div>
+          </div>
+          <div class="col-md-6 col-xs-12  mt-5">
+            <label for="lastname">Last Name</label> 
+            <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastname" id="lastname">
+            <div class="text-danger" *ngIf="lastname.invalid && lastname.errors.required && lastname.touched">Last Name is required</div>
+          </div>
+        </div>
+        <div class="row ml-5 mr-5">
+          <div class="col-md-6 col-xs-12 mt-5">
+            <label for="password">Password</label> 
+            <input type="password" class="form-control" placeholder="Enter Password" formControlName="password" id="password">
+            <div class="text-danger" *ngIf="password.invalid && password.errors.required && password.touched">Password is required</div>
+            <div class="text-danger" *ngIf="password.errors?.minlength">Password must be atleast 5 characters </div>
+
+          </div>
+          <div class="col-md-6 col-xs-12 mt-5">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Enter Confirm Password" formControlName="confirmPassword" id="confirmPassword">
+            <div class="text-danger" *ngIf="confirmPassword.invalid && confirmPassword.errors.required && confirmPassword.touched">Confirm the Password</div>
+            <div class="text-danger"
+            *ngIf="signUpForm.get('confirmPassword').hasError('nomatch')">Password and Confirm Password do not match</div> 
+          </div>
+        </div>
+        <div class="row mt-5 ml-5 mr-5 mb-5">
+          <div class="col-12">
+            <button type="submit" class="btn orange mt-3" [disabled]="!signUpForm.valid">Signup</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

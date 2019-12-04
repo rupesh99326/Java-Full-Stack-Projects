@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style\style.css">
+</head>
+<body>
+<header>
+Movie Cruiser
+<img src="images\logo.png">
+<a  id="mv" href="movie-list-admin.html">Movies</a>
+</header>
+<br>
+<br>
+<h2 id="h21"> Edit Movie</h2>
+
+<br>
+<br>
+
+<form name="myform" action="edit-movie-status.html" >
+<table >
+<tr>
+<td colspan="4" class="df"><label for="t1"><b>Title</b></label></td>
+</tr>
+<tr>
+<td colspan="4" class="df"><input type="text" id="t1" name="uname" required></td>
+</tr>
+<tr>
+<td class="df"><label for="t2"><b>Gross($)</b></label></td>
+<td class="df"><label for="t3"><b>Active</b></label></td>
+<td class="df"><label for="t4"><b>Date of Launch</b></label></td>
+<td class="df"><label for="t5"><b>Genre</b></label></td>
+</tr>
+<tr>
+<td class="df"><input type="text" name="price" id="t2" required></td>
+<td class="df"><input type="radio"name="Active"  value="yes" id="t3" checked>Yes<input type="radio" name="Active"value="no">No</td>
+<td class="df"><input type="text" name="date" id="t4"required></td>
+<td class="df"><select name="o" id="t5">
+<option></option>
+<option value="Main course">Superhero</option>
+<option value="de">Science Fiction</option>
+<option value="st">Superhero</option>
+<option value="dri">Romance</option>
+<option value="st">Comedy</option>
+<option value="dri">Adventure</option>
+<option value="dri">Thriller</option>
+</select></td>
+</tr>
+<tr>
+
+
+ 
+<td colspan="4" class="df"><input type="checkbox" id="m" value="m" ><label for="m">Has Teaser</label></td>
+
+</tr>
+<tr>
+<td colspan="4" class="df"><button type="submit" id="b2" onclick="return jspfunction()">Save</button></td>
+</table>
+</form>
+<footer>
+<p id="b">Copyright © 2019</p></footer>
+<script src="js\script.js">
+
+ 
+	
+
+
+
+	
+
+
+</script>
+</body>
+</html>
