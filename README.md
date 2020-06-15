@@ -7,10 +7,13 @@ There are two projects in this : 1) Truyum : Food Ordering Website
 These projects are developed and implemented with following Technologies and Frameworks
 
 Programming Language : JAVA with MySQL
+
 Frameworks : Spring Framework(REST API's) with Hibernate(connection to database)
 
 FrontEND : ANGULAR
+
 Backend  : JAVA + Spring + HIbernate
+
 Database : MySQL 
 
 Full Stack project files are :
